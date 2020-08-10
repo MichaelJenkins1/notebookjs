@@ -4,7 +4,6 @@
 (function () {
     var root = this;
     var VERSION = "0.4.2";
-
     // Get browser or JSDOM document
     var doc = root.document;
     if (!doc) {
@@ -44,11 +43,11 @@
     };
 
     var getMarkdown = function () {
-        return root.marked || condRequire("marked"); 
+        return root.marked || require("marked"); 
     };
 
     var getAnsi = function () {
-        var lib = root.ansi_up || condRequire("ansi_up");
+        var lib = root.ansi_up || require("ansi_up");
         return lib && lib.ansi_to_html;
     };
 
